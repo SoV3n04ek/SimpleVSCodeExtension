@@ -9,14 +9,29 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [{
-      "command": "justblogparserexample.helloWorld",
-      "title": "Hello World"
-    }]
+      "command": "justblogparserexample.searchWDSBlogExample",
+      "title": "Search WDS Blog example"
+    },
+    {
+      "command": "justblogparserexample.meow",
+      "title": "Meow"      
+    }
+    ],
+    "keybindings": [
+      {
+        "command": "justblogparserexample.meow",
+        "key": "ctrl+m",
+        "mac": "cmd+m"
+      }
+    ]
   },
+ 
   "scripts": {
     "lint": "eslint .",
     "pretest": "npm run lint",
